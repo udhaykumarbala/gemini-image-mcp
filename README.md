@@ -1,8 +1,8 @@
-# gemini-image-mcp
+# gemini-image-studio-mcp
 
 MCP server for AI image generation and editing with Google Gemini. Create web assets, ad creatives, and brand visuals — with structured JSON editing for precise, repeatable control.
 
-[![npm version](https://img.shields.io/npm/v/gemini-image-mcp.svg)](https://www.npmjs.com/package/gemini-image-mcp)
+[![npm version](https://img.shields.io/npm/v/gemini-image-studio-mcp.svg)](https://www.npmjs.com/package/gemini-image-studio-mcp)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## What Makes This Different
@@ -36,13 +36,13 @@ Get one free at [Google AI Studio](https://aistudio.google.com/apikey).
 ### 2. Install
 
 ```bash
-npm install -g gemini-image-mcp
+npm install -g gemini-image-studio-mcp
 ```
 
 ### 3. Add to Claude Code
 
 ```bash
-claude mcp add gemini-image-mcp -e GEMINI_API_KEY=your-key-here -- gemini-image-mcp
+claude mcp add gemini-image-studio-mcp -e GEMINI_API_KEY=your-key-here -- gemini-image-studio-mcp
 ```
 
 Or add to your project's `.claude/mcp.json`:
@@ -50,9 +50,9 @@ Or add to your project's `.claude/mcp.json`:
 ```json
 {
   "mcpServers": {
-    "gemini-image-mcp": {
+    "gemini-image-studio-mcp": {
       "command": "npx",
-      "args": ["-y", "gemini-image-mcp"],
+      "args": ["-y", "gemini-image-studio-mcp"],
       "env": {
         "GEMINI_API_KEY": "your-key-here"
       }
@@ -230,7 +230,7 @@ style_modifiers.aesthetic      → Aesthetic style
 ### Claude Code
 
 ```bash
-claude mcp add gemini-image-mcp -e GEMINI_API_KEY=your-key -- gemini-image-mcp
+claude mcp add gemini-image-studio-mcp -e GEMINI_API_KEY=your-key -- gemini-image-studio-mcp
 ```
 
 ### Cursor
@@ -240,9 +240,9 @@ Add to `.cursor/mcp.json`:
 ```json
 {
   "mcpServers": {
-    "gemini-image-mcp": {
+    "gemini-image-studio-mcp": {
       "command": "npx",
-      "args": ["-y", "gemini-image-mcp"],
+      "args": ["-y", "gemini-image-studio-mcp"],
       "env": {
         "GEMINI_API_KEY": "your-key-here"
       }
@@ -254,7 +254,7 @@ Add to `.cursor/mcp.json`:
 ### Any MCP Client
 
 ```bash
-GEMINI_API_KEY=your-key npx gemini-image-mcp
+GEMINI_API_KEY=your-key npx gemini-image-studio-mcp
 ```
 
 The server communicates over stdio using the [Model Context Protocol](https://modelcontextprotocol.io/).

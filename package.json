@@ -1,11 +1,11 @@
 {
-  "name": "gemini-image-mcp",
+  "name": "gemini-image-studio-mcp",
   "version": "1.0.0",
   "description": "MCP server for AI image generation and editing with Google Gemini. Create web assets, ad creatives, and brand visuals with structured JSON editing for precise control. Powered by Nano Banana.",
   "type": "module",
   "main": "dist/index.js",
   "bin": {
-    "gemini-image-mcp": "./dist/index.js"
+    "gemini-image-studio-mcp": "./dist/index.js"
   },
   "files": [
     "dist",
@@ -42,12 +42,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/udhaykumarbala/gemini-image-mcp.git"
+    "url": "git+https://github.com/udhaykumarbala/gemini-image-studio-mcp.git"
   },
   "bugs": {
-    "url": "https://github.com/udhaykumarbala/gemini-image-mcp/issues"
+    "url": "https://github.com/udhaykumarbala/gemini-image-studio-mcp/issues"
   },
-  "homepage": "https://github.com/udhaykumarbala/gemini-image-mcp#readme",
+  "homepage": "https://github.com/udhaykumarbala/gemini-image-studio-mcp#readme",
   "engines": {
     "node": ">=18.0.0"
   },
