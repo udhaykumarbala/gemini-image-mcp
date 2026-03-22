@@ -1,0 +1,29 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.udhaykumarbala/gemini-image-studio",
+  "description": "MCP server for AI image generation and editing with Google Gemini. Create web assets, ad creatives, and brand visuals with structured JSON editing for precise control. Powered by Nano Banana.",
+  "repository": {
+    "url": "https://github.com/udhaykumarbala/gemini-image-studio-mcp",
+    "source": "github"
+  },
+  "version": "1.0.1",
+  "packages": [
+    {
+      "registryType": "npm",
+      "identifier": "gemini-image-studio-mcp",
+      "version": "1.0.1",
+      "transport": {
+        "type": "stdio"
+      },
+      "environmentVariables": [
+        {
+          "description": "Google AI Studio API key for Gemini",
+          "isRequired": true,
+          "format": "string",
+          "isSecret": true,
+          "name": "GEMINI_API_KEY"
+        }
+      ]
+    }
+  ]
+}
