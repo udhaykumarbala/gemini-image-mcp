@@ -39,6 +39,11 @@ export async function handleEditImage(
     return { content: [{ type: "text" as const, text: `Failed to load image: ${input.image_path}. ${err}` }], isError: true };
   }
 
+  const imageSize = Buffer.from(b64, "base64").length;
+  if (imageSize > 20 * 1024 * 1024) {
+    return { content: [{ type: "text" as const, text: "Warning: Image exceeds 20MB. Consider resizing for better performance." }], isError: true };
+  }
+
   let prompt: string;
   let changesApplied: string[] = [];
 

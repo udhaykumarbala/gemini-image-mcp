@@ -58,6 +58,10 @@ export async function handleGenerateImage(
         return { content: [{ type: "text" as const, text: `Failed to load reference image: ${refPath}. ${err}` }], isError: true };
       }
     }
+    const totalSize = images.reduce((sum, img) => sum + img.base64.length * 0.75, 0);
+    if (totalSize > 20 * 1024 * 1024) {
+      return { content: [{ type: "text" as const, text: "Warning: Total reference image size exceeds 20MB. Consider resizing images for better performance." }], isError: true };
+    }
   }
 
   const req: GenerateRequest = {
