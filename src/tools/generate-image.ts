@@ -101,7 +101,7 @@ export async function handleGenerateImage(
   return {
     content: [
       { type: "text" as const, text: JSON.stringify(response, null, 2) },
-      { type: "resource" as const, resource: { uri: `file://${imagePath}`, mimeType: "image/png" } },
+      { type: "resource" as const, resource: { uri: `file://${imagePath}`, mimeType: "image/png", text: imagePath } },
     ],
   };
 }

@@ -114,7 +114,7 @@ export async function handleEditImage(
   return {
     content: [
       { type: "text" as const, text: JSON.stringify(response, null, 2) },
-      { type: "resource" as const, resource: { uri: `file://${editedPath}`, mimeType: "image/png" } },
+      { type: "resource" as const, resource: { uri: `file://${editedPath}`, mimeType: "image/png", text: editedPath } },
     ],
   };
 }
