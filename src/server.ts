@@ -14,7 +14,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 
 export async function createServer(outputDir: string) {
   const server = new McpServer({
-    name: "nanobanana",
+    name: "gemini-image-studio-mcp",
     version: "1.0.0",
   });
 
