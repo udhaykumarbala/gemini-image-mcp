@@ -10,7 +10,7 @@
     "doc": "docs"
   },
   "scripts": {
-    "build": "tsc",
+    "build": "tsc && cp src/presets/presets.json dist/presets/presets.json && cp src/schema/nano-banana.schema.json dist/schema/nano-banana.schema.json",
     "dev": "tsx src/index.ts",
     "test": "vitest run",
     "test:watch": "vitest"
