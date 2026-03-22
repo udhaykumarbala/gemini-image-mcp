@@ -1,0 +1,6 @@
+node_modules/
+dist/
+output/
+.env
+*.blueprint.json
+*.meta.json
