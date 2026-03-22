@@ -1,24 +1,56 @@
 {
-  "name": "img-mcp",
+  "name": "gemini-image-mcp",
   "version": "1.0.0",
+  "description": "MCP server for AI image generation and editing with Google Gemini. Create web assets, ad creatives, and brand visuals with structured JSON editing for precise control. Powered by Nano Banana.",
   "type": "module",
-  "main": "index.js",
+  "main": "dist/index.js",
   "bin": {
-    "nanobanana-mcp": "./dist/index.js"
+    "gemini-image-mcp": "./dist/index.js"
   },
-  "directories": {
-    "doc": "docs"
-  },
+  "files": [
+    "dist",
+    "prompts",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
   "scripts": {
     "build": "tsc && cp src/presets/presets.json dist/presets/presets.json && cp src/schema/nano-banana.schema.json dist/schema/nano-banana.schema.json",
     "dev": "tsx src/index.ts",
     "test": "vitest run",
-    "test:watch": "vitest"
+    "test:watch": "vitest",
+    "prepublishOnly": "npm run build && npm test"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "ai",
+    "image-generation",
+    "gemini",
+    "nano-banana",
+    "nanobanana",
+    "google-gemini",
+    "ai-image",
+    "claude",
+    "mcp-server",
+    "text-to-image",
+    "image-editing",
+    "claude-code",
+    "cursor"
+  ],
+  "author": "udhaykumarbala",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/udhaykumarbala/gemini-image-mcp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/udhaykumarbala/gemini-image-mcp/issues"
+  },
+  "homepage": "https://github.com/udhaykumarbala/gemini-image-mcp#readme",
+  "engines": {
+    "node": ">=18.0.0"
+  },
   "dependencies": {
     "@google/genai": "^1.46.0",
     "@modelcontextprotocol/sdk": "^1.27.1",

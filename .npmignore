@@ -1,0 +1,14 @@
+src/
+tests/
+docs/
+output/
+.env
+.env.example
+*.blueprint.json
+*.meta.json
+plan.md
+api_test.html
+uiflow.md
+swagger.yaml
+tsconfig.json
+.gitignore
