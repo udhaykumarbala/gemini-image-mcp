@@ -1,0 +1,122 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Nano Banana Image Prompt Schema",
+  "type": "object",
+  "required": ["meta", "subject", "scene"],
+  "properties": {
+    "user_intent": { "type": "string", "description": "Natural language summary of goal" },
+    "meta": {
+      "type": "object",
+      "properties": {
+        "aspect_ratio": { "type": "string", "enum": ["16:9","9:16","1:1","4:3","3:4","21:9","3:2","2:3","5:4","4:5","1:4","4:1","1:8","8:1"] },
+        "quality": { "type": "string", "enum": ["ultra_photorealistic","standard","raw","anime_v6","3d_render_octane","oil_painting","sketch","pixel_art","vector_illustration"] },
+        "seed": { "type": "integer" },
+        "guidance_scale": { "type": "number", "default": 7.5, "minimum": 1.0, "maximum": 20.0 }
+      }
+    },
+    "subject": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["type", "description"],
+        "properties": {
+          "id": { "type": "string" },
+          "type": { "type": "string", "enum": ["person","animal","cyborg","monster","statue","robot","vehicle","object"] },
+          "description": { "type": "string" },
+          "name": { "type": "string" },
+          "age": { "type": "string" },
+          "gender": { "type": "string", "enum": ["male","female","non-binary","androgynous"] },
+          "hair": {
+            "type": "object",
+            "properties": {
+              "style": { "type": "string", "enum": ["bald","buzz_cut","crew_cut","pixie_cut","bob_cut","french_bob","lob_long_bob","shoulder_length","long_straight","long_wavy","long_curly","beach_waves","ponytail","high_ponytail","low_ponytail","bun","messy_bun","top_knot","man_bun","braids","box_braids","cornrows","dreadlocks","afro","mohawk","undercut","side_part","slicked_back","pompadour","quiff","fade_low","fade_mid","fade_high","wolf_cut","shag_cut","curtain_bangs","bantu_knots","space_buns","half_up_half_down","wet_look","windswept"] },
+              "color": { "type": "string", "enum": ["jet_black","soft_black","dark_brown","chestnut_brown","light_brown","dark_blonde","golden_blonde","platinum_blonde","strawberry_blonde","auburn","dark_red","ginger","copper","grey","silver","white","salt_and_pepper","pastel_pink","hot_pink","neon_green","electric_blue","navy_blue","royal_purple","lavender","teal","rainbow","ombre","highlighted"] }
+            }
+          },
+          "expression": { "type": "string", "enum": ["neutral","smiling","laughing","angry","screaming","crying","seductive","stoic","surprised","tired","suspicious","pain"] },
+          "position": { "type": "string", "enum": ["center","left","right","far_left","far_right","background","foreground","floating_above","sitting_on_ground"] },
+          "pose": { "type": "string" },
+          "clothing": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "item": { "type": "string" },
+                "color": { "type": "string" },
+                "fabric": { "type": "string", "enum": ["cotton","wool","silk","linen","denim","leather","latex","velvet","chiffon","satin","nylon","spandex","lace","tweed","corduroy","fur","fleece","mesh","cashmere","flannel","sequins"] },
+                "pattern": { "type": "string", "enum": ["solid","striped","plaid","polka_dot","floral","camouflage","tie_dye","geometric","animal_print","paisley","checked","gradient"] },
+                "fit": { "type": "string", "enum": ["tight","slim","regular","loose","oversized","baggy","fitted","flowy"] },
+                "layer": { "type": "string", "enum": ["underwear","inner","middle","outer","coat"] }
+              }
+            }
+          },
+          "accessories": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "item": { "type": "string" },
+                "material": { "type": "string", "enum": ["gold","silver","plastic","wood","glass","metal","diamond","pearl","leather","bone","obsidian","chrome","fabric","canvas","straw","feathers","paper","resin","rubber","silicone","ceramic","crystal","stone","rope","enamel","carbon_fiber"] },
+                "color": { "type": "string" },
+                "location": { "type": "string", "enum": ["head","face","ears","neck","wrists","fingers","waist","back","held_in_hand","floating_nearby"] }
+              }
+            }
+          }
+        }
+      }
+    },
+    "scene": {
+      "type": "object",
+      "properties": {
+        "location": { "type": "string" },
+        "time": { "type": "string", "enum": ["golden_hour","blue_hour","high_noon","midnight","sunrise","sunset","twilight","pitch_black"] },
+        "weather": { "type": "string", "enum": ["clear_skies","overcast","rainy","stormy","snowing","foggy","hazy","sandstorm","acid_rain"] },
+        "lighting": {
+          "type": "object",
+          "properties": {
+            "type": { "type": "string", "enum": ["natural_sunlight","studio_softbox","hard_flash","neon_lights","candlelight","cinematic","bioluminescent","firelight","god_rays","rembrandt"] },
+            "direction": { "type": "string", "enum": ["front_lit","back_lit","side_lit","top_down","rim_light","silhouette","under_lit"] }
+          }
+        },
+        "background_elements": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "technical": {
+      "type": "object",
+      "properties": {
+        "camera_model": { "type": "string", "enum": ["iPhone 15 Pro","Sony A7R IV","Leica M6","Canon EOS R5","Hasselblad X2D","Polaroid Now","GoPro Hero 12","CCTV Security Cam"] },
+        "lens": { "type": "string", "enum": ["16mm","24mm","35mm","50mm","85mm","105mm","200mm","400mm","macro_100mm","fisheye_8mm"] },
+        "aperture": { "type": "string", "enum": ["f/1.2","f/1.4","f/1.8","f/2.8","f/4.0","f/5.6","f/8.0","f/11","f/16"] },
+        "shutter_speed": { "type": "string", "enum": ["1/8000","1/4000","1/1000","1/500","1/250","1/125","1/60","1/30","1/15","1s","long_exposure_bulb"] },
+        "iso": { "type": "string", "enum": ["100","200","400","800","1600","3200","6400","12800"] },
+        "film_stock": { "type": "string", "enum": ["Kodak Portra 400","Kodak Gold 200","Kodak Ektar 100","Fujifilm Pro 400H","Fujifilm Velvia 50","CineStill 800T","Ilford HP5 Plus (B&W)","Kodak Tri-X 400 (B&W)","Polaroid 600","Kodachrome 64"] }
+      }
+    },
+    "composition": {
+      "type": "object",
+      "properties": {
+        "framing": { "type": "string", "enum": ["extreme_close_up","close_up","medium_shot","cowboy_shot","full_body","wide_shot","extreme_wide_shot","macro_detail"] },
+        "angle": { "type": "string", "enum": ["eye_level","low_angle","high_angle","dutch_angle","bird_eye_view","worm_eye_view","overhead","pov","drone_view"] },
+        "focus_point": { "type": "string", "enum": ["face","eyes","hands","background","foreground_object","whole_scene"] }
+      }
+    },
+    "text_rendering": {
+      "type": "object",
+      "properties": {
+        "enabled": { "type": "boolean", "default": false },
+        "text_content": { "type": "string" },
+        "placement": { "type": "string", "enum": ["floating_in_air","neon_sign_on_wall","printed_on_tshirt","graffiti_on_wall","smart_phone_screen","computer_monitor","book_cover","movie_poster","subtitles"] },
+        "font_style": { "type": "string", "enum": ["bold_sans_serif","elegant_serif","handwritten","cyberpunk_digital","graffiti_tag","gothic","retro_pixel","neon_tube"] },
+        "color": { "type": "string" }
+      }
+    },
+    "style_modifiers": {
+      "type": "object",
+      "properties": {
+        "medium": { "type": "string", "enum": ["photography","3d_render","oil_painting","watercolor","pencil_sketch","ink_drawing","anime","concept_art","digital_illustration","claymation","papercraft"] },
+        "aesthetic": { "type": "array", "items": { "type": "string", "enum": ["cyberpunk","steampunk","vaporwave","synthwave","noir","minimalist","maximalist","gothic","baroque","retro_80s","vintage_50s","futuristic","post_apocalyptic","ethereal","dreamcore","weirdcore"] } },
+        "artist_reference": { "type": "array", "items": { "type": "string" } }
+      }
+    }
+  }
+}

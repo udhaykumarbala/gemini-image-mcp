@@ -1,0 +1,102 @@
+[
+  {
+    "name": "facebook_ad",
+    "category": "ad",
+    "display_name": "Facebook Ad Creative",
+    "aspect_ratio": "1:1",
+    "recommended_size": "1K",
+    "dimensions_px": "1080x1080",
+    "tips": ["Keep text under 20% of image area", "Use bright, contrasting colors", "Place key message in the top third"],
+    "best_for": "Facebook/Instagram feed ads"
+  },
+  {
+    "name": "instagram_story_ad",
+    "category": "ad",
+    "display_name": "Instagram Story Ad",
+    "aspect_ratio": "9:16",
+    "recommended_size": "2K",
+    "dimensions_px": "1080x1920",
+    "tips": ["Keep safe zone 250px from top and bottom", "Bold text, minimal detail — users swipe fast"],
+    "best_for": "Instagram/Facebook story ads"
+  },
+  {
+    "name": "google_display_banner",
+    "category": "ad",
+    "display_name": "Google Display Banner",
+    "aspect_ratio": "16:9",
+    "recommended_size": "1K",
+    "dimensions_px": "1200x628",
+    "tips": ["Clear CTA area on the right third", "Avoid small text — often shown at reduced size"],
+    "best_for": "Google Display Network responsive ads"
+  },
+  {
+    "name": "hero_image",
+    "category": "web",
+    "display_name": "Website Hero Image",
+    "aspect_ratio": "21:9",
+    "recommended_size": "2K",
+    "dimensions_px": "2560x1080",
+    "tips": ["Leave space for text overlay (left or center)", "Ensure subject works with both light and dark text", "Consider gradient overlay compatibility"],
+    "best_for": "Above-the-fold hero sections"
+  },
+  {
+    "name": "og_image",
+    "category": "web",
+    "display_name": "Open Graph / Social Share Image",
+    "aspect_ratio": "16:9",
+    "recommended_size": "1K",
+    "dimensions_px": "1200x630",
+    "tips": ["Title text must be legible at thumbnail size", "Brand logo in corner"],
+    "best_for": "Link previews on social media / Slack / Discord"
+  },
+  {
+    "name": "product_card",
+    "category": "web",
+    "display_name": "Product Card Image",
+    "aspect_ratio": "4:5",
+    "recommended_size": "1K",
+    "dimensions_px": "800x1000",
+    "tips": ["Clean background (white or neutral)", "Product centered with padding", "Consistent lighting across product line"],
+    "best_for": "E-commerce product grids"
+  },
+  {
+    "name": "linkedin_post",
+    "category": "social",
+    "display_name": "LinkedIn Post Image",
+    "aspect_ratio": "1:1",
+    "recommended_size": "1K",
+    "dimensions_px": "1080x1080",
+    "tips": ["Professional tone — avoid overly casual imagery", "Data visualizations and infographics perform well"],
+    "best_for": "LinkedIn feed posts"
+  },
+  {
+    "name": "twitter_post",
+    "category": "social",
+    "display_name": "Twitter/X Post Image",
+    "aspect_ratio": "16:9",
+    "recommended_size": "1K",
+    "dimensions_px": "1200x675",
+    "tips": ["High contrast — Twitter feed is noisy", "Memes and bold statements perform well"],
+    "best_for": "Twitter/X feed posts"
+  },
+  {
+    "name": "youtube_thumbnail",
+    "category": "social",
+    "display_name": "YouTube Thumbnail",
+    "aspect_ratio": "16:9",
+    "recommended_size": "2K",
+    "dimensions_px": "1280x720",
+    "tips": ["Large face + bold text = highest CTR", "Max 3-4 words of text", "Bright, saturated colors stand out"],
+    "best_for": "YouTube video thumbnails"
+  },
+  {
+    "name": "email_header",
+    "category": "web",
+    "display_name": "Email Header Banner",
+    "aspect_ratio": "3:1",
+    "recommended_size": "1K",
+    "dimensions_px": "600x200",
+    "tips": ["Keep file size small — many email clients block large images", "Design must work without images loaded (alt text fallback)"],
+    "best_for": "Email marketing headers"
+  }
+]
